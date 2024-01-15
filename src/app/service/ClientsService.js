@@ -9,7 +9,7 @@ class ClientsService {
       const existsUser = await this.checkExistsUserWithEmail(email);
 
       if (existsUser) {
-        throw new Error('Email address is already in use. Please choose another.');
+        throw new Error('Email já cadastrado. Favor verificar email informado.');
       }
 
       const clientResult = await db.pool.query(
